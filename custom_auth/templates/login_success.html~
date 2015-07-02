@@ -1,0 +1,6 @@
+{% extends base.html %}
+{% block content %}
+
+<h2>Successful login</h2>
+<h2>welcome to home page</h2>
+{% endblock %}

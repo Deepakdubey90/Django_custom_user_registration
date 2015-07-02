@@ -1,0 +1,53 @@
+<div class="container">
+  <form action="/author-book/" method="post">
+    <div class="container">
+      <div class="text-format-family pat-div-section"><strong>BOOK INFORMATION</strong></div>
+      <hr class="pat-hr-margin">
+      <div class="white-box-inner row" style="margin-bottom: 14px;">
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Book Name</div>
+            <div class="col-md-12">
+              <input placeholder=" Book Name" aj-localize name ="name"
+                     class="form-control add-new" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Publication Name</div>
+            <div class="col-md-12">
+              <input aj-localize placeholder="Publication Name" aj-localize name ="publication"
+                     class="form-control add-new"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+      </div>
+      <div class="white-box-inner row" style="margin-bottom: 14px;">
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Published Date</div>
+            <div class="col-md-12">
+              <input aj-localize placeholder="MM/DD/YYYY" name ="publish_date"
+                     class="form-control add-new datepicker" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+        <div class="col-sm-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12"
+                 aj-localize>Price</div>
+            <div class="col-md-12">
+              <input aj-localize placeholder="Price" name ="price"
+                     class="form-control add-new datepicker" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

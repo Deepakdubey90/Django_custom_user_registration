@@ -1,0 +1,151 @@
+<div  class="container">
+  <form action="" method="post">
+    <div class="container">
+      <div class="text-format-family pat-div-section"><strong>User Registration</strong></div>
+      <hr class="pat-hr-margin">
+      <div class="white-box-inner row" style="margin-bottom: 14px;">
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>First Name</div>
+            <div class="col-md-12">
+              <input placeholder=" Book Name" aj-localize name ="name"
+                     class="form-control add-new" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Publication Name</div>
+            <div class="col-md-12">
+              <input aj-localize placeholder="Publication Name" aj-localize name ="publication"
+                     class="form-control add-new"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+      </div>
+      <div class="white-box-inner row" style="margin-bottom: 14px;">
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Published Date</div>
+            <div class="col-md-12">
+              <input aj-localize placeholder="MM/DD/YYYY" name ="publish_date"
+                     class="form-control add-new datepicker" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+        <div class="col-sm-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12"
+                 aj-localize>Price</div>
+            <div class="col-md-12">
+              <input aj-localize placeholder="Price" name ="price"
+                     class="form-control add-new datepicker" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container">
+      <div class="text-format-family pat-div-section"><strong>AUTHOR INFORMATION</strong></div>
+      <hr class="pat-hr-margin">
+      <div class="white-box-inner row" style="margin-bottom: 14px;">
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>First Name</div>
+            <div class="col-md-12">
+              <input placeholder="First Name" aj-localize name ="first_name"
+                     class="form-control add-new" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Last Name</div>
+            <div class="col-md-12">
+              <input placeholder="Last Name" aj-localize name ="last_name"
+                     class="form-control add-new" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+      </div>
+
+      <div class="white-box-inner row" style="margin-bottom: 14px;">
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Gender</div>
+            <div class="col-md-12">
+              <div class="drop-downdiv add-new">
+                <select name="gender" value="" type="text" class="form-control">
+                  {% for key, value in CATEGORY_CHOICES.items %}
+                  <option> {{value}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Book Published</div>
+            <div class="col-md-12">
+              <div class="drop-downdiv add-new">
+                <select name="published_books" value="" type="text" class="form-control">
+                  {% for key, value in BOOK_CATEGORY.items %}
+                  <option> {{value}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+      </div>
+      <div class="white-box-inner row" style="margin-bottom: 14px;">
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>DOB</div>
+            <div class="col-md-12">
+              <input aj-localize placeholder="MM/DD/YYYY" name="dob"
+                     class="form-control add-new datepicker" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Marital Status</div>
+            <div class="col-md-12">
+              <div class="drop-downdiv add-new">
+                <select name="marital_status" value="" type="text"
+                        class="form-control">
+                  {% for key, value in MARITAL_STATUS.items %}
+                  <option> {{value}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="submitbut-checkot save-submitbut add-button-margin">
+      <input type="submit" class="btn btn-primary" id="#save" style="margin-left: 47%;" onclick="author_book_details()">
+      <button class="btn btn-primary" id="#clear" type="button">
+        <span aj-localize >Cancel</span>
+      </button>
+      <br>
+      <div class="clearfix"></div>
+    </div>
+  </form>
+</div>

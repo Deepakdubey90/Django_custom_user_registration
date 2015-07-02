@@ -1,0 +1,155 @@
+<div  class="container">
+  <form action="." method="post">
+    {% csrf_token %}
+    <div class="container">
+      <div class="text-format-family pat-div-section">BOOK INFORMATION</div>
+      <hr class="pat-hr-margin">
+      <div class="white-box-inner row" style="margin-bottom: 14px;">
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Book Name</div>
+            <div class="col-md-12">
+              <input placeholder=" Book Name" aj-localize
+                     class="form-control add-new" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Publication Name</div>
+            <div class="col-md-12">
+              <input aj-localize placeholder="Publication Name" aj-localize
+                     class="form-control add-new"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+      </div>
+      <div class="white-box-inner row" style="margin-bottom: 14px;">
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Published Date</div>
+            <div class="col-md-12">
+              <input aj-localize placeholder="YYYY-MM-DD"
+                     class="form-control add-new datepicker" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+        <div class="col-sm-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12"
+                 aj-localize>Price</div>
+            <div class="col-md-12">
+              <input aj-localize placeholder="Price"
+                     class="form-control add-new datepicker" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container">
+      <div class="text-format-family pat-div-section">AUTHOR INFORMATION</div>
+      <hr class="pat-hr-margin">
+      <div class="white-box-inner row" style="margin-bottom: 14px;">
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            {{ forms.first_name }}
+            <div class="form-lebel new-margin col-md-12" aj-localize>First Name</div>
+            <div class="col-md-12">
+              <input placeholder="First Name" aj-localize
+                     class="form-control add-new" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Last Name</div>
+            <div class="col-md-12">
+              <input placeholder="Last Name" aj-localize
+                     class="form-control add-new" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+      </div>
+
+      <div class="white-box-inner row" style="margin-bottom: 14px;">
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Gender</div>
+            <div class="col-md-12">
+              <div class="drop-downdiv add-new">
+                <select name="" value="" type="text" class="form-control">
+                  {% for g in gender %}
+                  <option> {{g.id}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Book Published</div>
+            <div class="col-md-12">
+              <div class="drop-downdiv add-new">
+                <select name="" value="" type="text" class="form-control">
+                  {% for b in BOOK_CATEGORY %}
+                  <option> {{b.bc}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+      </div>
+      <div class="white-box-inner row" style="margin-bottom: 14px;">
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>DOB</div>
+            <div class="col-md-12">
+              <input aj-localize placeholder="YYYY-MM-DD"
+                     class="form-control add-new datepicker" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Marital Status</div>
+            <div class="col-md-12">
+              <div class="drop-downdiv add-new">
+                <select name="" value="" type="text"
+                        class="form-control">
+                  {% for status in MARITAL_STATUS %}
+                  <option> {{status.ms}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="submitbut-checkot save-submitbut add-button-margin">
+      <button class="btn btn-primary" id="#save" style="margin-left: 47%;" onclick="author_book_details()">
+        <span aj-localize >Save</span>
+      </button>
+      <button class="btn btn-primary" id="#clear" type="button">
+        <span aj-localize >Cancel</span>
+      </button>
+      <br>
+      <div class="clearfix"></div>
+    </div>
+  </form>
+</div>

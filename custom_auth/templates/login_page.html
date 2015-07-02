@@ -1,0 +1,40 @@
+<div  class="container">
+  <form action="" method="POST">
+    {% csrf_token %}
+    <div class="container">
+      <div class="text-format-family pat-div-section"><strong>USER AUTHENTICATION</strong></div>
+      <hr class="pat-hr-margin">
+      <div class="white-box-inner row" style="margin-bottom: 14px;">
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Email:</div>
+            <div class="col-md-12">
+              <input placeholder=" Email" aj-localize name ="name"
+                     class="form-control add-new" type="text"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+        <div class="col-md-6 patient-details-ul">
+          <li type="none">
+            <div class="form-lebel new-margin col-md-12" aj-localize>Password</div>
+            <div class="col-md-12">
+              <input aj-localize placeholder="Password" aj-localize name ="password"
+                     class="form-control add-new" type="password"/>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="submitbut-checkot save-submitbut add-button-margin">
+      <input type="submit" class="btn btn-primary" id="#save" style="margin-left: 47%;" onclick="login()" value="Login">
+      <button class="btn btn-primary" id="#clear" type="button">
+        <span aj-localize >Cancel</span>
+      </button>
+      <br>
+      <div class="clearfix"></div>
+    </div>
+  </form>
+</div>

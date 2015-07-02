@@ -1,0 +1,6 @@
+{% extends "index.html" %}
+<h3> {% block header %} {% endblock  %}</h3>
+{% block content %}
+{% include "login.html" %}
+{% endblock %}
+</html
