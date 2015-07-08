@@ -1,5 +1,5 @@
 <div  class="container">
-  <form action="" method="POST">
+  <form action="" method="post">
     {% csrf_token %}
     <div class="container">
       <div class="text-format-family pat-div-section"><strong>USER AUTHENTICATION</strong></div>
@@ -29,7 +29,7 @@
     </div>
     <br>
     <div class="submitbut-checkot save-submitbut add-button-margin">
-      <input type="submit" class="btn btn-primary" id="#save" style="margin-left: 47%;" onclick="login()" value="Login">
+      <input type="submit" class="btn btn-primary" id="#save" style="margin-left: 47%;" onclick="auth_view()" value="Login">
       <button class="btn btn-primary" id="#clear" type="button">
         <span aj-localize >Cancel</span>
       </button>

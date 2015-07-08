@@ -57,10 +57,10 @@ WSGI_APPLICATION = 'custom_auth.wsgi.application'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'deepakdubey597@gmail.com'
-EMAIL_HOST_PASSWORD = '#include<deepakdubey.h>'
+EMAIL_HOST_PASSWORD = 'oeksiwoqbyvarbxp'
 EMAIL_PORT = 25
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'dubeydeepak570@gmail.com'
+DEFAULT_FROM_EMAIL = 'deepakdubey597@gmail.com'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
